@@ -1,6 +1,3 @@
-
-
-
 //! Arreglo que simula los valores que se ingresan
 const ingresos = [ new Ingreso('Salario', 2100,00), new Ingreso('Venta Coche', 1500)];
 
@@ -34,7 +31,7 @@ let totalEgresos = () => {
 //! Realiza los calculos
 let cargarCabezera = () => {
     let presupuesto = totalIngresos() - totalEgresos();
-    let porcentEgreso = totalEgresos() / totalIngresos();
+    //let porcentEgreso = totalEgresos() / totalIngresos();
 
     console.log("total ingreso:",totalIngresos());
     console.log("toal egreso: ",totalEgresos());
@@ -200,13 +197,10 @@ const agregarDato = () => {
 
     if(descripcion.value !== "" && valor.value !== "" ) {
         if(tipo.value === 'agregar') {
-            //valor.readOnly = false;
             ingresos.push(new Ingreso(descripcion.value, +valor.value));
             cargarCabezera();
             cargarIngresos();
         } else if(tipo.value === 'quitar') {
-            //valor.readOnly = true;
-           // valor.style.color = 'red';
             egresos.push(new Egreso(descripcion.value, +valor.value));
             cargarCabezera();
             cargarEgresos();
@@ -214,7 +208,6 @@ const agregarDato = () => {
 
         setiarValor(descripcion, valor);
     }
-    console.log("agregando dato");
 };
 
 const setiarValor = (descripcion, valor) => {
