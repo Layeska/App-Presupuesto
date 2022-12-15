@@ -255,3 +255,8 @@
 .btnEliminar:focus {
     color: red;
 }
+
+.g {
+    width: 20%;
+    height: 20%;
+}

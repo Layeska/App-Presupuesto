@@ -8,6 +8,7 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
     <link rel="stylesheet" href="./styles/estilos.css" />
     <link rel="stylesheet" href="./styles/normalize.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="./svg/logo.svg"/>
     <title>App Presupuesto</title>
 </head>
@@ -22,6 +23,9 @@
         </div>
 
         <div class="container-general d-flex">
+            <div class="g">
+                <canvas id="grafica"></canvas>
+            </div>
             <div class="buscador">
                 <form class="d-flex justify-content-center gap-2 mt-5" id="forma" onsubmit="return false;">
                     <div class="">
@@ -32,10 +36,10 @@
                         </select>
                     </div>
                     <div class="">
-                        <input type="text" class="form-control" id="descripcion" placeholder="Agregar Descripción" required>
+                        <input type="text" class="form-control" id="descripcion" placeholder="Agregar Descripción">
                     </div>
                     <div>
-                        <input type="number" class="form-control" id="valor" step="any" placeholder="valor" required>
+                        <input type="number" class="form-control" id="valor" step="any" placeholder="valor">
                     </div>
                     <div class="">
                         <button type="submit" class="btn m-auto boton" onclick="agregarDato()">

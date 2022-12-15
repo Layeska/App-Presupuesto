@@ -214,3 +214,23 @@ const setiarValor = (descripcion, valor) => {
     descripcion.value = "";
     valor.value = "";
 };
+
+//! La gráfica 
+
+const grafica = document.querySelector("#grafica");
+const etiquetas = ["Ingresos", "Egresos"];
+
+const datosIngresos = {
+    data: [totalIngresos(), totalEgresos()],
+    backgroundColor: ['#CEB0CE','#F5E4F5'],
+    borderColor: ['#DDA0DD','#DDA0DD'],
+    borderWidth: 1,
+};
+
+new Chart(grafica, {
+    type: 'pie',
+    data: {
+        labels: etiquetas,
+        datasets: [ datosIngresos]
+    },
+});
