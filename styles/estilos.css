@@ -157,7 +157,7 @@
 
 /*.map {
     background: green;
-}*/
+} 428*926*/
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
     /*body {
@@ -173,6 +173,16 @@
 
     .contenedor-datos {
         margin-top: 2.5%;
+    }
+
+    .g{
+        /*background: sandybrown;*/
+        width: 40% !important;
+        height: 20rem !important;
+    }
+
+    #grafica {
+        width: 100% !important;
     }
 } 
 
@@ -195,7 +205,7 @@
     .aux {
         /*background: rgb(137, 202, 165);*/
         padding: 0;
-        margin-left: -35% !important;
+        margin-left: -25% !important;
         justify-content: center;
         align-items: center;
         width: 18rem !important;
@@ -204,6 +214,18 @@
 
     .aux p {
         margin: auto;
+    }
+
+    .g{
+        /*background: sandybrown;*/
+        width: 50% !important;
+        height: 15rem !important;
+        margin-bottom: -10%;
+        margin-top: 5%;
+    }
+
+    #grafica {
+        width: 100% !important;
     }
 }
 
@@ -218,26 +240,26 @@
     }
 
     .aux {
-        margin-left: -65% !important;
+        margin-left: -45% !important;
         margin-top: 5%;
     }
 
     .contenedor-datos {
         margin-top: 5%;
     }
-}
 
-#myChart {
-    background: yellow;
-    width: 15rem !important;
-    height: 20% !important;
-    margin: auto;
-    margin-top: 2%;
-}
+    .g{
+        /*background: sandybrown;*/
+        width: 50% !important;
+        height: 15rem !important;
+        margin-bottom: -20%;
+        margin-top: 10%;
+    }
 
-/*.lista-itemEstilo {
-    background: seagreen;
-}*/
+    #grafica {
+        width: 100% !important;
+    }
+}
 
 .b {
     margin-top: 5%;
