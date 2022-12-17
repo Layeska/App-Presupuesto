@@ -138,10 +138,10 @@
 }
 
 @media screen and (min-width: 400px) {
-    .b {
+    /*.b {
         margin-left: -45%;
         width: 280% !important;
-    }
+    }*/
 
     .ingresos-datos h2, .egresos-datos h2 {
         text-align: center;
