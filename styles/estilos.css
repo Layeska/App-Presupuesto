@@ -1,50 +1,7 @@
-/*.general{
-    background: rgb(245, 233, 232);
-}
-
-
-.presupuesto_ingreso, .presupuesto_egreso {
-    background: rgb(193, 138, 157);
-    width: 40%;
-    display: flex;
-    justify-content: space-around;
-    margin: auto;
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-    border-radius: 10px;
-}
-
-.y {
-    margin-left: 20%;
-}
-
-.presupuesto_ingreso p , .presupuesto_egreso p {
-    margin: auto;
-}
-
-
-.derecha {
-    /*background: seagreen;
-    display: flex;
-    width: 50%;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.presupuesto_ingreso_porcentaje {
-    background: rgb(194, 255, 102);
-    width: 30%;
-}
-
-*/
-/************/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;1,400;1,700&display=swap');
 
 .bg {
     background: plum;
-    /*display: flex;
-    justify-content: center;*/
     align-items: center;
     height: 32vh;
     font-family: 'Lato', sans-serif;
@@ -86,46 +43,17 @@
     .buscador { margin-top: 5.5%; }
 }
 
-
-/*.d {
-    background: rgb(196, 15, 196);
-    border-radius: 10px;
-    text-align: center;
-    font-weight: 700;
-    font-family: 'Lato', sans-serif;
-}*/
-
-/*.ingresos1, .egresos1 {
-    background: rgb(221, 160, 221, 0.5);
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    margin-top: 5%;
-}*/
-
-/*.ingresos1 {
-    margin-top: 10% !important;
-}*/
-
-/*.ingresos1 p, .egresos1 p {
-    margin: auto;
-    font-family: 'Lato', sans-serif;
-}*/
-
 #presupuestoTotal {
     font-size: 2rem;
 }
 
 .container-general {
     margin-top: 7%;
-    /*background: sandybrown;*/
 }
 
 .buscador {
-    /*margin-top: 3%;*/
     width: 50%;
     margin-left: 2%;
-    /*background-color: aqua;*/
 }
 
 .boton svg {
@@ -136,7 +64,6 @@
 
 .contenedor-datos {
     width: 50%;
-    /*background: rgba(238, 160, 151, 0.5);*/
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -144,28 +71,9 @@
     align-content: center;
 }
 
-/*@media screen and (max-width: 1250px) {
-    body {
-        background: rgb(187, 142, 165);
-    }
-
-    .contenedor-datos {
-        background: salmon;
-        flex-direction: column;
-    }
-}*/
-
-/*.map {
-    background: green;
-} 428*926*/
 
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-    /*body {
-        background: seagreen;
-    }*/
-
     .container-general {
-        /*background: goldenrod;*/
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -175,8 +83,7 @@
         margin-top: 2.5%;
     }
 
-    .g{
-        /*background: sandybrown;*/
+    .g {
         width: 40% !important;
         height: 20rem !important;
     }
@@ -194,7 +101,6 @@
     }
 
     input {
-        /*background: salmon;*/
         width: 7.9rem !important;
     }
 
@@ -203,7 +109,6 @@
     }
 
     .aux {
-        /*background: rgb(137, 202, 165);*/
         padding: 0;
         margin-left: -25% !important;
         justify-content: center;
@@ -217,7 +122,6 @@
     }
 
     .g{
-        /*background: sandybrown;*/
         width: 50% !important;
         height: 15rem !important;
         margin-bottom: -10%;
@@ -230,12 +134,7 @@
 }
 
 @media screen and (max-width: 360px) {
-   /* body {
-        background: firebrick;
-    }*/
-
     input {
-        /*background: salmon;*/
         width: 6rem !important;
     }
 
@@ -248,8 +147,7 @@
         margin-top: 5%;
     }
 
-    .g{
-        /*background: sandybrown;*/
+    .g {
         width: 50% !important;
         height: 15rem !important;
         margin-bottom: -20%;
@@ -264,8 +162,6 @@
 .b {
     margin-top: 5%;
     background: rgb(221, 160, 221, 0.5);
-    /*background: none;
-    border: none;*/
     width: 50vh;
 } 
 
@@ -278,7 +174,8 @@
     color: red;
 }
 
-.g {
-    width: 20%;
-    height: 20%;
+.alertStyle {
+    position: absolute;
+    top: 0;
+    right: 0;
 }

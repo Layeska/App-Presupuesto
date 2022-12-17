@@ -60,7 +60,6 @@ const cargarIngresos = () => {
     }
 
     document.querySelector(".lista-ingresos").innerHTML = ingresosHTML;
-    console.log(ingresosHTML);
 }
 
 const crearIngresoHTML = (valor) => {
@@ -83,7 +82,6 @@ const crearIngresoHTML = (valor) => {
         </div>
     </div>
     `;
-
     return valueHTML;
 };
 
@@ -189,6 +187,24 @@ const eliminarEgreso = (id) => {
     cargarEgresos();
 };
 
+//! Modal
+const alertAgregador = () => {
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+    const alert = (message, type) => {
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = [
+            `<div class="alert alert-${type} alert-dismissible alertStyle" role="alert">`,
+            `   <div>${message}</div>`,
+            '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+            '</div>'
+        ].join('');
+        alertPlaceholder.append(wrapper);
+    }
+
+    alert('Pago Agregado Correctamente!', 'success');
+}
+
 const agregarDato = () => {
     let forma = document.forms["forma"];
     let tipo = forma["tipo"];
@@ -200,37 +216,18 @@ const agregarDato = () => {
             ingresos.push(new Ingreso(descripcion.value, +valor.value));
             cargarCabezera();
             cargarIngresos();
+            alertAgregador();
         } else if(tipo.value === 'quitar') {
             egresos.push(new Egreso(descripcion.value, +valor.value));
             cargarCabezera();
             cargarEgresos();
+            alertAgregador();
         }
-
-        setiarValor(descripcion, valor);
     }
+        setiarValor(descripcion, valor);
 };
 
 const setiarValor = (descripcion, valor) => {
     descripcion.value = "";
     valor.value = "";
 };
-
-//! La gráfica 
-
-const grafica = document.querySelector("#grafica");
-const etiquetas = ["Ingresos", "Egresos"];
-
-const datosIngresos = {
-    data: [totalIngresos(), totalEgresos()],
-    backgroundColor: ['#CEB0CE','#F5E4F5'],
-    borderColor: ['#DDA0DD','#DDA0DD'],
-    borderWidth: 1,
-};
-
-new Chart(grafica, {
-    type: 'pie',
-    data: {
-        labels: etiquetas,
-        datasets: [ datosIngresos]
-    },
-});
